@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Math Demystified | AI-Powered Astrophysics Tutor</title>
     
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js?config=TeX-mml-chtml"></script>
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <style>
         /* Thetawise Premium Dark Tech Palette */
@@ -83,7 +87,7 @@
             font-weight: 600;
         }
 
-        /* Central Workspace Workspace */
+        /* Central Workspace */
         main {
             flex: 1;
             display: flex;
@@ -216,5 +220,90 @@
         /* Mobile Adjustments */
         @media (max-width: 768px) {
             aside { display: none; }
-            .
+            .top-bar { padding: 0 1rem; }
+            .content-area { padding: 1rem; }
+            .ai-input-wrapper { width: calc(100% - 2rem); bottom: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <aside>
+        <div class="brand">🌌 SpaceMath AI</div>
+        
+        <div class="nav-group">
+            <div class="nav-label">Core Modules</div>
+            <a href="#" class="nav-item active">✨ Astrophysics Solver</a>
+            <a href="#" class="nav-item">📊 Interactive Graphs</a>
+            <a href="#" class="nav-item">📝 Practice Quizzes</a>
+        </div>
+
+        <div class="nav-group">
+            <div class="nav-label">Active Lessons</div>
+            <a href="#" class="nav-item">🪐 1. Mass Derivation</a>
+            <a href="#" class="nav-item">📐 2. Conic Sections</a>
+            <a href="#" class="nav-item">📶 3. Cosmic Ladder</a>
+        </div>
+    </aside>
+
+    <main>
+        <div class="top-bar">
+            <span style="font-weight: 600; font-size: 0.9rem;">Workspace / Astrophysics</span>
+            <span class="tutor-mode-badge">✨ Tutor Mode Active</span>
+        </div>
+
+        <div class="content-area">
+            <div class="dashboard-container">
+
+                <section class="ai-response-card">
+                    <div class="card-header-meta">
+                        <span>🤖 AI Step-by-Step Breakdown</span>
+                        <span>•</span>
+                        <span>Algebraic Physics</span>
+                    </div>
+                    <h2>The Ultimate Diet Plan: Weighing a Star with High School Algebra</h2>
+                    <p>How do astrophysicists know how heavy a distant star is without ever dropping a physical weighing scale onto it? The secret isn't advanced sorcery—it's simple algebraic cancellation.</p>
+                    <p>Imagine a planet of mass \(m\) orbiting a massive star of mass \(M\) at a distance of \(r\) with a constant velocity \(v\). Two fundamental physical forces are perfectly balanced here: the <strong>Gravitational Force</strong> pulling them together, and the <strong>Centripetal Force</strong> keeping the planet moving in a circle.</p>
+                    
+                    <div class="math-block">
+                        $$\frac{G \cdot M \cdot m}{r^2} = \frac{m \cdot v^2}{r}$$
+                    </div>
+                    
+                    <p>Look closely at the numerator on both sides. The mass of the smaller orbiting planet (\(m\)) is present on both sides. If we divide both sides by \(m\), it completely vanishes! By isolating the star's mass (\(M\)), our algebraic manipulation gives us the final tracking formula:</p>
+                    
+                    <div class="math-block">
+                        $$M = \frac{v^2 \cdot r}{G}$$
+                    </div>
+                    <p><strong>Conclusion:</strong> Because the small mass cancels out, we only need to measure how fast a planet orbits (\(v\)) and how far away it is (\(r\)) to calculate the exact mass of a giant star.</p>
+                </section>
+
+                <section class="ai-response-card">
+                    <div class="card-header-meta">
+                        <span>🤖 AI Step-by-Step Breakdown</span>
+                        <span>•</span>
+                        <span>Conic Geometry</span>
+                    </div>
+                    <h2>Slicing Up Space: How a Cone Explains the Orbit of Mars</h2>
+                    <p>In reality, Mars, Earth, and even distant comets travel along paths called <strong>conic sections</strong> rather than perfect circles.</p>
+                    <p>Imagine a perfect geometric solid cone. In mathematics, if you take a flat 2D plane and slice straight through that cone horizontally, the cross-section creates a perfect circle. But if you tilt your slicing knife at an angle, you get an elongated oval called an <strong>ellipse</strong>.</p>
+                    
+                    <div class="math-block">
+                        $$\text{Circle} \rightarrow \text{Ellipse} \rightarrow \text{Parabola} \rightarrow \text{Hyperbola}$$
+                    </div>
+                    
+                    <p>Every single object moving through space under the influence of gravity is trapped on one of these sliced-cone pathways. Johannes Kepler discovered that Mars travels along an ellipse, with the Sun sitting at one of the focal points.</p>
+                    <p><strong>Conclusion:</strong> The path of a multi-ton planet orbiting through space is governed by the exact same geometric cross-section rules you use when analyzing a sliced cone on a classroom chalkboard.</p>
+                </section>
+
+            </div>
+        </div>
+
+        <div class="ai-input-wrapper">
+            <input type="text" class="ai-input-field" placeholder="Ask SpaceMath AI to demystify another cosmic concept..." readonly>
+            <button class="ai-submit-btn">Solver Mode</button>
+        </div>
+    </main>
+
+</body>
+</html>
 
